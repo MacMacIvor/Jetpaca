@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class enemyBehavior : MonoBehaviour
 {
+
 
     enum enemyState
     {
@@ -105,6 +107,7 @@ public class enemyBehavior : MonoBehaviour
         if (health <= 0)
         {
             gameObject.transform.parent.GetComponent<monsterWall>().killWall();
+            gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
         }
     }
 

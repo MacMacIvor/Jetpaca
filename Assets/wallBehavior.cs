@@ -59,11 +59,14 @@ public class wallBehavior : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "Bullet(Clone)")
         {
             bulletManager.singleton.resetBullet(collision.gameObject.gameObject);
         }
-        
+        else if (collision.gameObject.name == "Alpaca")
+        {
+            collision.gameObject.GetComponent<alpaca>().playerDies();
+        }
     }
 }

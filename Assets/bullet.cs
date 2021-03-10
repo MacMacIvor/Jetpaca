@@ -29,13 +29,7 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dirPos = alpaca.transform.position;
-
-        dirPos = new Vector3(transform.position.x - dirPos.x, transform.position.y - dirPos.y, 0);
-
-        dirPos = Vector3.Normalize(dirPos);
-
-        transform.LookAt(transform.position + dirPos);
+        
         switch (state)
         {
             case bulletState.ACTIVE:

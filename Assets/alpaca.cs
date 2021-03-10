@@ -5,8 +5,11 @@ using UnityEngine;
 public class alpaca : MonoBehaviour
 {
     float speed = 10;
+
+    public GameObject particles;
     
     public GameObject Alpaca;
+    bool gotHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,21 +20,38 @@ public class alpaca : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        switch (gotHit)
         {
-            Alpaca.transform.position += Vector3.up  * speed * Time.deltaTime;
+            case false:
+                if (Input.GetKey(KeyCode.W))
+                {
+                    Alpaca.transform.position += Vector3.up * speed * Time.deltaTime;
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    Alpaca.transform.position += Vector3.down * speed * Time.deltaTime;
+                }
+
+                //Don't let the alpaca go off the screen
+                Vector3 pos = Camera.main.WorldToViewportPoint(Alpaca.gameObject.transform.position);
+                pos.y = Mathf.Clamp(pos.y, 0.05f, 0.95f);
+                Alpaca.gameObject.transform.position = Camera.main.ViewportToWorldPoint(pos);
+                break;
         }
-        else if (Input.GetKey(KeyCode.S))
+       
+    }
+    public void playerDies()
+    {
+        if (gotHit != true)
         {
-            Alpaca.transform.position += Vector3.down * speed * Time.deltaTime;
+            //Play animation
+            particles.GetComponent<ParticleSystem>().Play();
+            //Now block the thing
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = false;
+            points.singleton.stopTime();
+            tryAgain.singleton.bringUIDown();
         }
-
-        //Don't let the alpaca go off the screen
-        Vector3 pos = Camera.main.WorldToViewportPoint(Alpaca.gameObject.transform.position);
-        pos.y = Mathf.Clamp(pos.y, 0.05f, 0.95f);
-        Alpaca.gameObject.transform.position = Camera.main.ViewportToWorldPoint(pos);
-
-        
-
+        gotHit = true;
     }
 }
