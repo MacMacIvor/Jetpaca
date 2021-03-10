@@ -77,4 +77,8 @@ public class monsterWall : MonoBehaviour
         }
 
     }
+    public void increaseSpeed(float amount)
+    {
+        speed *= amount;
+    }
 }

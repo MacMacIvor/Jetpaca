@@ -5,7 +5,7 @@ using UnityEngine;
 public class wallManager : MonoBehaviour
 {
     public static wallManager singleton;
-    float initSpawnTimer = 1;
+    float initSpawnTimer = 2;
     float spawnTimer = 3;
     public void Awake()
     {
@@ -65,7 +65,7 @@ public class wallManager : MonoBehaviour
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0)
         {
-            int random = Random.Range(1, 30);
+            int random = Random.Range(1, 15);
             switch (random)
             {
                 case 1:
@@ -407,5 +407,18 @@ public class wallManager : MonoBehaviour
         
 
     }
-
+    public void increaseSpeed(float amount)
+    {
+        initSpawnTimer /= (amount * 0.94f);
+        bulletManager.singleton.increaseSpeed(amount);
+        for (int i = 0; i < 6; i++)
+        {
+            wallsHoldera[i].GetComponent<wallBehavior>().increaseSpeed(amount);
+            wallsHolderb[i].GetComponent<wallBehavior>().increaseSpeed(amount);
+            wallsHolderc[i].GetComponent<wallBehavior>().increaseSpeed(amount);
+            wallsHolderd[i].GetComponent<wallBehavior>().increaseSpeed(amount);
+            wallsHoldere[i].GetComponent<wallBehavior>().increaseSpeed(amount);
+            wallsHolderMonster[i].GetComponent<monsterWall>().increaseSpeed(amount);
+        }
+    }
 }

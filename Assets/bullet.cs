@@ -53,6 +53,8 @@ public class bullet : MonoBehaviour
                 state = bulletState.INACTIVE;
                 break;
             case bulletState.INACTIVE:
+                soundManager.soundsSingleton.playSoundEffect(Random.Range(4, 7));
+
                 state = bulletState.ACTIVE;
 
                 gameObject.transform.position = initPos;
@@ -82,5 +84,8 @@ public class bullet : MonoBehaviour
         }
         return true;
     }
-
+    public void increaseSpeed(float amount)
+    {
+        bulletSpeed *= amount;
+    }
 }

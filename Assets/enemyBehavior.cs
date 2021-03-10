@@ -104,6 +104,7 @@ public class enemyBehavior : MonoBehaviour
     public void takeDMG()
     {
         health--;
+        soundManager.soundsSingleton.playSoundEffect(Random.Range(0, 4));
         if (health <= 0)
         {
             gameObject.transform.parent.GetComponent<monsterWall>().killWall();

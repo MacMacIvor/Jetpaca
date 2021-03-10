@@ -12,9 +12,10 @@ using UnityEngine.SceneManagement;
 public class points : MonoBehaviour
 {
     public static points singleton;
+    int lastInterval = 0;
     private void Awake()
     {
-        DontDestroyOnLoad(this);
+        
         if (singleton == null)
         {
             singleton = this;
@@ -59,6 +60,13 @@ public class points : MonoBehaviour
         {
             timePassed += Time.deltaTime * timeMod;
             timerString.text = "Score: " + timePassed.ToString();
+            float interval = Mathf.Floor(timePassed / 15);
+            
+            if (interval > lastInterval)
+            {
+                lastInterval = (int)(interval);
+                wallManager.singleton.increaseSpeed(1.1f);
+            }
         }
     }
     public void saveTime()

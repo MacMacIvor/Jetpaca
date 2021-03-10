@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: e0252c03096898e43848beade5e8a132
+  - enabled: 1
+    path: Assets/Scenes/RefreshScene.unity
+    guid: 9dd653fac0fb2f047915f34662089257
   m_configObjects: {}

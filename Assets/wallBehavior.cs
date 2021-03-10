@@ -69,4 +69,8 @@ public class wallBehavior : MonoBehaviour
             collision.gameObject.GetComponent<alpaca>().playerDies();
         }
     }
+    public void increaseSpeed(float amount)
+    {
+        speed *= amount;
+    }
 }

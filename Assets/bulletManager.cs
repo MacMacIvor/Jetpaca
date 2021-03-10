@@ -89,5 +89,11 @@ public class bulletManager : MonoBehaviour
         }
 
     }
-
+    public void increaseSpeed(float amount)
+    {
+        for (int i = 0; i < Bullets.Count; i++)
+        {
+            Bullets[i].GetComponent<bullet>().increaseSpeed(amount);
+        }
+    }
 }

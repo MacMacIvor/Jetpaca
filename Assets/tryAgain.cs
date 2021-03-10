@@ -42,7 +42,7 @@ public class tryAgain : MonoBehaviour
     public void bringUIDown()
     {
         message1.gameObject.transform.position = new Vector3(message1.gameObject.transform.position.x, (canvas.GetComponent<RectTransform>().rect.height * canvas.GetComponent<RectTransform>().localScale.y) / 2 + 3, 0);
-        message1.text = "Your score is " + points.singleton.getPoints().ToString() + "Try again?";
+        message1.text = "Your score is " + points.singleton.getPoints().ToString() + "\nTry again?";
         image.gameObject.transform.position = new Vector3( image.gameObject.transform.position.x, (canvas.GetComponent<RectTransform>().rect.height * canvas.GetComponent<RectTransform>().localScale.y) / 4, 0);
         image2.gameObject.transform.position = new Vector3(image2.gameObject.transform.position.x, (canvas.GetComponent<RectTransform>().rect.height * canvas.GetComponent<RectTransform>().localScale.y) / 6, 0);
     }
