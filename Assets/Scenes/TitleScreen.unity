@@ -242,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0013733, y: 0.000015259}
-  m_SizeDelta: {x: 1175.5, y: 600}
+  m_AnchoredPosition: {x: -6.2095, y: 9}
+  m_SizeDelta: {x: 1111.3549, y: 859.6155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211486736
 MonoBehaviour:
@@ -258,14 +258,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.2781239, b: 0.2781239, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 0cc6da12563ff6848b5b767e85476a6a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 212aa201f51bf2546a05cf940ea78030, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc9172780115fa429e9ec295b5cde36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfUI: 1
+  typeOfUI: 2
 --- !u!114 &357285740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 6fe211d0312a14d4e9ba4c053be4c9c5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 73b53714d5f89cc47bf70300d061a1a1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc9172780115fa429e9ec295b5cde36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeOfUI: 2
+  typeOfUI: 1
 --- !u!114 &910711476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 92b6b78121b88ad418cadaab560d0470, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

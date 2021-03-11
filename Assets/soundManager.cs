@@ -39,7 +39,7 @@ public class soundManager : MonoBehaviour
 
         switch (name)
         {
-            case "Immediate music- Fury Unleashed":
+            case "Blazer Rail":
                 backgroundPlaying = (firstSong);
                 break;
         }

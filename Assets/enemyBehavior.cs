@@ -7,6 +7,7 @@ public class enemyBehavior : MonoBehaviour
 {
 
 
+
     enum enemyState
     {
         ACTIVE,
@@ -92,11 +93,13 @@ public class enemyBehavior : MonoBehaviour
                 type = enemyType.BEAR;
                 transform.position = new Vector3(transform.position.x, Random.Range(-4.5f, 4.5f), transform.position.z);
                 health = 2;
+                gameObject.GetComponent<Animator>().SetBool("isBear", true);
                 break;
             case 1:
                 type = enemyType.COYOTE;
                 transform.position = new Vector3(transform.position.x, Random.Range(-4.5f, 4.5f), transform.position.z);
                 health = 1;
+                gameObject.GetComponent<Animator>().SetBool("isBear", false);
                 break;
         }
     }
@@ -114,7 +117,6 @@ public class enemyBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "Bullet(Clone)")
         {
             bulletManager.singleton.resetBullet(collision.gameObject.gameObject);

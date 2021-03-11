@@ -297,7 +297,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 2924d8678f846a2488ae4993d9c87b7e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -469,8 +469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0043771, y: 0.000015259}
-  m_SizeDelta: {x: 1098.9, y: 600}
+  m_AnchoredPosition: {x: 0.0043771, y: -46.8414}
+  m_SizeDelta: {x: 1098.9, y: 693.6829}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073361308
 MonoBehaviour:
@@ -485,14 +485,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.2781239, b: 0.2781239, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 095d249a6bfe288468c8c278601838cd, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
